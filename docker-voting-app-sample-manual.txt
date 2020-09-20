@@ -1,0 +1,48 @@
+ 3  docker network create frontend 
+    4  docker network create backend
+    5  docker network ls 
+    6  docker run -d --net frontend -p 80:80  gauravbajpai9211/examplevotingapp_vote
+    7  docker ps -a
+    8  docker run -d --net frontend redis:3.2
+    9  docker run -d --net frontend --net backend gauravbajpai9211/examplevotingapp_worker:java
+   10  docker run -d --net=frontend --net=backend gauravbajpai9211/examplevotingapp_worker:java
+   11  docker inspect frontend
+   12  docker inspect backend
+   13  docker run -d --net=frontend --net=backend gauravbajpai9211/examplevotingapp_worker:java
+   14  docker network ls 
+   15  docker run -d  --net=backend gauravbajpai9211/examplevotingapp_worker:java
+   16* 
+   17  docker inspect a22f284e65bb61e63a93412f796f88bd57fb3a1a399479b7276a2dba42a70c84
+   18  docker run -d --net backend -e POSTGRES_HOST_AUTH_METHOD=trust -v /var/lib/postgresql/data postgres:9.4
+   19  docker ps -a
+   20  docker run --net frontend -p 5001:80 gauravbajpai9211/examplevotingapp_result
+   21  docker run -d gauravbajpai9211/examplevotingapp_result
+   22  docker kill f28b0294d14dd36b4201f6e259821457f98036ca9909d7f86fd24e477c8a62d4
+   23  docker run -d --net backend -p 5001:80 gauravbajpai9211/examplevotingapp_result
+   24  docker logs 5778
+   25  docker ps -a 
+   26  docker logs eba
+   27  docker kill eba
+   28  docker run -d --mount type=volume,source=db-data,target=/var/lib/postgresql/data --net -e POSTGRES_HOST_AUTH_METHOD=trust
+   29  docker run -d --mount type=volume,source=db-data,target=/var/lib/postgresql/data --net -e POSTGRES_HOST_AUTH_METHOD=trust
+   30  docker run -d --mount type=volume,source=db-data,target=/var/lib/postgresql/data --net -e POSTGRES_HOST_AUTH_METHOD=trust
+   31  docker run -d --mount type=volume,source=db-data,target=/var/lib/postgresql/data --net -e POSTGRES_HOST_AUTH_METHOD=trust
+   32  docker run -d -v db-data:/var/lib/postgresql/data --net backend -e POSTGRES_HOST_AUTH_METHOD=trust postgres:9.4
+   33  docker logs 5778
+   34  docker logs 5778
+   35  docker logs 5778
+   36  docker ps -a
+   37  docker logs 4b34
+   38  docker logs 5778
+   39  docker ps -a
+   40  docker logs 2758
+   41  docker ps -a
+   42  docker kill 114
+   43  docker run -d --name redis --net frontend  redis:3.2
+   44  docker logs 24a2
+   45  docker ps 
+   46  docker rename hopeful_dewdney db
+   47  docker logs 5778
+   48  docker ps 
+   49  docker rename jovial_jackson worker
+   50  docker rename epic_franklin result 
